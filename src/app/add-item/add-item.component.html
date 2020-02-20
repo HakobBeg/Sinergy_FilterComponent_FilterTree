@@ -6,7 +6,11 @@
 
 <mat-form-field appearance="fill">
   <mat-label>Item Category</mat-label>
-  <input [(ngModel)]="newItem.category" matInput placeholder="Type here...">
+  <mat-select value="All" [(ngModel)]="newItem.category">
+    <mat-placeholder class="selectPlaceholder">Select Category</mat-placeholder>
+    <mat-option *ngFor="let propName of categories"
+                [value]="propName">{{propName|titlecase}}</mat-option>
+  </mat-select>
 </mat-form-field>
 
 <mat-form-field appearance="fill">

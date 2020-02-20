@@ -10,7 +10,7 @@ import {Item} from '../../definitions';
 export class AddItemComponent implements OnInit {
 
   newItem: Item = {name: '', category: '', price: null, count: null, date: null, Id: null};
-
+  categories = ['shoese', 'food', 'technique', 'tools', 'wear', 'electronics'];
 
   constructor(private itemsService: ServerWorkerService) {
     this.newItem.name = '';
