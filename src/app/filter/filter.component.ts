@@ -12,7 +12,7 @@ export class FilterComponent implements OnInit {
   }
 
   showComponent = false;
-  categories = ['Shoes', 'Food', 'Technique', 'Tools', 'Wear', 'Electronics'];
+  categories = ['shoese', 'food', 'technique', 'tools', 'wear', 'electronics'];
   tableRows = [];
 
   chekboxsValues: any;

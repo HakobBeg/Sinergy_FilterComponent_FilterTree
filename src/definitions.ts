@@ -40,8 +40,8 @@ function expressionToFunction(exp: string) {
     },
     '==': (key, value) => {
       function _(list) {
-        return list.filter(item => {
-          return item[key] == value;
+        return list.filter((item) => {
+          return item[key] === value;
         });
       }
 
