@@ -4,14 +4,13 @@
   <mat-spinner diameter="300" value="100" mode="indeterminate">Loading</mat-spinner>
 </div>
 
-<div *ngIf="!loading">
+<div *ngIf="!loading" class="tableContent">
 
 <table mat-table [dataSource]="dataSource" #table>
 
-
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef>ID</th>
-    <td mat-cell *matCellDef="let item"> {{item.Id}} </td>
+    <th mat-header-cell *matHeaderCellDef>ID &nbsp;<mat-checkbox></mat-checkbox></th>
+    <td mat-cell *matCellDef="let item"> {{item.Id}} &nbsp; <mat-checkbox></mat-checkbox></td>
   </ng-container>
 
   <ng-container matColumnDef="name">

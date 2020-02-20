@@ -16,7 +16,7 @@ table th {
 
   color: rgba(214, 214, 214, 0.82);
   font-size: 100%;
-  font-family: "Segoe UI Semibold";
+  font-family: "Segoe UI Semibold", serif;
 }
 
 /*table th:hover {*/
@@ -75,5 +75,4 @@ app-add-item{
   color: #00848d;
 
 }
-
 

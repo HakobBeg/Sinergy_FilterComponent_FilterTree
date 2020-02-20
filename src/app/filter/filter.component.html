@@ -15,10 +15,9 @@
         <mat-slider #priceref
                     color="primary"
                     thumbLabel
-                    tickInterval="1000"
                     step="1"
                     min="1"
-                    max="100000"
+                    max="50000"
                     class="priceSlider"
                     [(ngModel)]="priceAt"></mat-slider>
         <label>{{priceref.value|currency:'AMD  '}}</label>
@@ -30,10 +29,8 @@
                     color="primary"
                     thumbLabel
                     step = "1"
-                    tickInterval="1000"
                     min="1"
-                    max="100000"
-                    value="100000"
+                    max="50000"
                     class="countSlider"
                     [(ngModel)]="priceTo"></mat-slider>
         <label>{{countref.value|currency: 'AMD '}}</label>
