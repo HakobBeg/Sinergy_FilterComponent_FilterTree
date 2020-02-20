@@ -26,8 +26,9 @@ export class FilterComponent implements OnInit {
     this.chekboxsValues = this.categories.map((cat) => {
       return {[cat]: false};
     });
-    this.priceAt = this.priceTo = 0;
-    this.selected = 'All';
+    this.priceAt = 0;
+    this.priceTo = 100000;
+    this.selected = 'Select';
   }
 
 

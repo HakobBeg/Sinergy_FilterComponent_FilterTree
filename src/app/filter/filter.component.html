@@ -3,11 +3,12 @@
 
 
     <div class="horizontalFilters">
-      <mat-select value="All" [(ngModel)]="selected">
+      <mat-select value="Select" [(ngModel)]="selected">
         <mat-placeholder class="selectPlaceholder">Select Item</mat-placeholder>
         <mat-option *ngFor="let propName of categories"
                     [value]="propName">{{'Show Only ' + propName|titlecase}}</mat-option>
         <mat-option [value]="'All'">Show All</mat-option>
+        <mat-option [value]="'Select'">Select</mat-option>
       </mat-select>
       <div class="slider">
         <label>Price At </label>
@@ -32,6 +33,7 @@
                     tickInterval="1000"
                     min="1"
                     max="100000"
+                    value="100000"
                     class="countSlider"
                     [(ngModel)]="priceTo"></mat-slider>
         <label>{{countref.value|currency: 'AMD '}}</label>
