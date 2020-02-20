@@ -1,0 +1,29 @@
+<div class = 'Inputs'>
+<mat-form-field appearance="fill" color='primary'>
+  <mat-label>Item Name</mat-label>
+  <input [(ngModel)]="newItem.name" matInput placeholder="Type here...">
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Item Category</mat-label>
+  <input [(ngModel)]="newItem.category" matInput placeholder="Type here...">
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Item Price</mat-label>
+  <input [(ngModel)] = "newItem.price" matInput placeholder="Type here...">
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Item count</mat-label>
+  <input [(ngModel)]="newItem.count" matInput placeholder="Type here...">
+</mat-form-field>
+</div>
+
+<div class = 'InputsActions'>
+  <button mat-button (click)="onAddButton()">Add Item</button>
+  <button mat-button (click)="onResetField()">Reset Fields</button>
+
+</div>
+
+

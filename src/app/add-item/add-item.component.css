@@ -1,0 +1,36 @@
+mat-form-field{
+width: 30%;
+  color: whitesmoke;
+}
+
+mat-form-field{
+  background-color: rgba(0, 62, 73, 0.45);
+}
+
+
+mat-form-field mat-label{
+  color: rgba(199, 199, 199, 0.75);
+}
+
+.Inputs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.InputsActions{
+  margin-top: 1%;
+  width: 40%;
+  margin-right: 30%;
+  margin-left: 30%;
+}
+
+.InputsActions button{
+  width: 45%;
+  margin-left: 2%;
+  font-size: 120%;
+  height: 60px;
+  background-color: rgba(0, 62, 73, 0.45);
+}
+
