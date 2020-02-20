@@ -1,0 +1,92 @@
+.FilterContent {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: rgba(0, 62, 73, 0.45);
+  user-select: none;
+  margin-bottom: 10px;
+}
+
+.FilterContent button{
+  background-color: rgba(0, 89, 105, 0.45);
+}
+
+mat-select {
+  width: 15%;
+  height: 25px;
+  background-color: rgba(0, 62, 73, 0.45);
+  padding: 10px;
+}
+
+
+/deep/ .mat-select-panel {
+  background-color: rgba(0, 84, 100, 0.91);
+}
+
+.FilterComponent{
+  padding: 0.5%;
+  margin-bottom: 10px;
+}
+
+.selectPlaceholder {
+  color: black;
+  font-size: 20px;
+}
+
+.priceSlider .countSlider{
+  width: 15%;
+  background-color: rgba(0, 62, 73, 0.45);
+  margin-left: 10px;
+}
+
+
+.horizontalFilters{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 70px;
+}
+
+/deep/ .mat-accent .mat-slider-track-fill {
+  background: whitesmoke!important;
+
+}
+
+:host ::ng-deep .mat-slider-min-value:not(.mat-slider-thumb-label-showing) .mat-slider-thumb {
+  background-color: whitesmoke;
+}
+
+:host ::ng-deep .mat-slider-thumb {
+  transform: scale(0.7);
+  background-color: white;
+  border: 1px solid #a2b4c4;
+}
+
+.chekboxs{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 40px;
+  background-color: rgba(0, 62, 73, 0.45);
+}
+
+.combinations{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.combinations label{
+  text-align: center;
+  font-family: Lato;
+  font-size: 30px;
+
+}
+
+.FilterButton{
+  width: 100%;
+}
