@@ -1,4 +1,3 @@
-
 function join(list1: Item[], list2: Item[]) {
   return Array.from(new Set(list1.concat(list2)));
 }
@@ -39,7 +38,7 @@ function expressionToFunction(exp: string) {
 
       return _;
     },
-    '=': (key, value) => {
+    '==': (key, value) => {
       function _(list) {
         return list.filter(item => {
           return item[key] == value;
@@ -52,6 +51,7 @@ function expressionToFunction(exp: string) {
 
   const parsedExp = expressionParser(exp);
   const v = isNaN(+parsedExp[2]) ? parsedExp[2] : +parsedExp[2];
+
 
   return functionDict[parsedExp[1]](parsedExp[0], v);
 }
