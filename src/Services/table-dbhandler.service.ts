@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Item, ExpressionTree} from '../definitions';
 import {ServerWorkerService} from './server-worker.service';
-import {Subject} from 'rxjs';
+import {BehaviorSubject, Subject} from 'rxjs';
 import {Node} from '../definitions';
 
 
@@ -12,7 +12,7 @@ export class TableDBHandlerService {
 
   allItems: Item[] = [];
   itemsModel: Item[] = [];
-  moduleChanges$: Subject<Item[]> = new Subject<Item[]>();
+  moduleChanges$: Subject<Item[]> = new BehaviorSubject([{Id: 1, name: 'init', category: 'init', price: 0, date: 0, count: 0,}]);
   tableColumns: string[] = ['id', 'name', 'category', 'price', 'count', 'date'];
   filterTree: ExpressionTree;
 
