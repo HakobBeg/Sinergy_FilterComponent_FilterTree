@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ServerWorkerService} from '../../Services/server-worker.service';
 import {Item} from '../../definitions';
+import {Route, Router} from '@angular/router';
 
 @Component({
   selector: 'app-add-item',
@@ -12,7 +13,7 @@ export class AddItemComponent implements OnInit {
   newItem: Item = {name: '', category: '', price: null, count: null, date: null, Id: null};
   categories = ['shoese', 'food', 'technique', 'tools', 'wear', 'electronics'];
 
-  constructor(private itemsService: ServerWorkerService) {
+  constructor(private itemsService: ServerWorkerService, private route: Router) {
     this.newItem.name = '';
     this.newItem.category = '';
     this.newItem.Id = 1000;
@@ -24,7 +25,11 @@ export class AddItemComponent implements OnInit {
   }
 
   onResetField() {
-  this.newItem = {name: '', category: '', price: null, count: null, date: null, Id: null};
+    this.newItem = {name: '', category: '', price: null, count: null, date: null, Id: null};
+  }
+
+  visualisateModel() {
+      this.route.navigate(['/visual']);
   }
 
   ngOnInit() {

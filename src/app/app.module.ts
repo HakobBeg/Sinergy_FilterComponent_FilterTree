@@ -24,6 +24,7 @@ import { AddItemComponent } from './add-item/add-item.component';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
 import {FormsModule} from '@angular/forms';
 import { FilterComponent } from './filter/filter.component';
+import { VizualComponent } from './vizual/vizual.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FilterComponent } from './filter/filter.component';
     NavbarComponent,
     ItemsTableComponent,
     AddItemComponent,
-    FilterComponent
+    FilterComponent,
+    VizualComponent,
   ],
   imports: [
     BrowserModule,

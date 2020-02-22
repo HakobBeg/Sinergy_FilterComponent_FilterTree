@@ -22,6 +22,8 @@
     "@angular/platform-browser": "~8.2.13",
     "@angular/platform-browser-dynamic": "~8.2.13",
     "@angular/router": "~8.2.13",
+    "canvasjs": "^1.8.3",
+    "chart.js": "^2.9.3",
     "firebase": "^7.8.1",
     "firebase-tools": "^7.13.0",
     "hammerjs": "^2.0.8",

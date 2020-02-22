@@ -1,0 +1,13 @@
+
+
+<div class = 'GraphTypes'>
+  <button mat-button (click)="changeGrapghType('line')">Line</button>
+  <button mat-button (click)="changeGrapghType('bar')" >Bar</button>
+  <button mat-button (click)="changeGrapghType('polarArea')" >Polar</button>
+  <button mat-button (click)="navigateBack()">Back <--</button>
+
+</div>
+
+<div class="graphic">
+  <canvas id="canvas"></canvas>
+</div>

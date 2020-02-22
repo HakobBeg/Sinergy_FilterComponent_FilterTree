@@ -1,8 +1,9 @@
-import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
+import {ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {ServerWorkerService} from '../../Services/server-worker.service';
 import {Item} from '../../definitions';
 import {MatTable} from '@angular/material';
 import {TableDBHandlerService} from '../../Services/table-dbhandler.service';
+import {Subscription} from 'rxjs';
 
 
 @Component({
@@ -10,11 +11,12 @@ import {TableDBHandlerService} from '../../Services/table-dbhandler.service';
   templateUrl: './items-table.component.html',
   styleUrls: ['./items-table.component.css']
 })
-export class ItemsTableComponent implements OnInit {
+export class ItemsTableComponent implements OnInit, OnDestroy {
 
   displayedColumns: string[] = ['id', 'name', 'category', 'price', 'count', 'date'];
   dataSource = [];
   loading = true;
+  private subscriptions$ = new Array<Subscription>();
 
   @ViewChild(MatTable, {static: false}) table: MatTable<any>;
 
@@ -49,9 +51,16 @@ export class ItemsTableComponent implements OnInit {
 
   ngOnInit() {
 
-    this.modelService.getModelItems$().subscribe((items) => {
+    this.subscriptions$.push(this.modelService.getModelItems$().subscribe((items) => {
       this.dataSource = items;
       this.loading = false;
+    }));
+  }
+
+  ngOnDestroy() {
+    this.subscriptions$.forEach((subscription) => {
+      subscription.unsubscribe();
     });
   }
+
 }

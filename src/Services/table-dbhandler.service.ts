@@ -32,7 +32,6 @@ export class TableDBHandlerService {
   filterModel(exp: string) {
     this.filterTree = new ExpressionTree(exp);
     this.itemsModel = this.filterList(this.filterTree.tree);
-    console.log(this.itemsModel);
     this.moduleChanges$.next(this.filterList(this.filterTree.tree));
   }
 
